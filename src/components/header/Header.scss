@@ -1,0 +1,203 @@
+@import './../../assets/abstracts/vars';
+@import './../../assets/abstracts/mixins';
+
+.header {
+  height: 6.4rem;
+  width: 100%;
+
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index: 1000;
+
+  background-color: $accentColor;
+  opacity: 0.9;
+
+  &__wrap {
+    padding-top: 0.8rem;
+
+    @include flexEdit(space-between, center);
+
+    position: relative;
+  }
+
+  &__logo {
+    @include textEdit(Open Sans, 700, 1.25rem);
+
+    color: $textColor;
+
+
+  }
+
+  &__burger {
+    width: 30px;
+    height: 20px;
+
+    display: none;
+
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    z-index: 200;
+
+    transition: all 0.3s ease 0s;
+
+    cursor: pointer;
+
+    &::before, &::after {
+      content: " ";
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $textColor;
+
+      position: absolute;
+      left: 0;
+
+      transition: all 0.3s ease 0s;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &-span {
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 100%;
+      height: 2px;
+      background-color: $textColor;
+      transition: all 0.3s ease 0s;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+  &__burger.active{
+    .header__burger-span{
+      display: none;
+    }
+    &::before{
+      top: 9px;
+      transform: rotate(45deg);
+    }
+    &::after{
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+  }
+
+  &__navigation {
+    &.active {
+      right: 0;
+    }
+
+    .navigation__list {
+      display: flex;
+
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .navigation__item {
+        margin-right: 1.7rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+        @media screen and (max-width: 768px) {
+          margin-bottom: 2rem;
+          margin-right: 0;
+        }
+
+        .navigation__link {
+          position: relative;
+          display: block;
+          //color: #222;
+          text-align: center;
+          padding: 8px 12px;
+          text-decoration: none;
+          z-index: 0;
+          color: $textColor;
+
+
+          @include textEdit(Roboto, 700, 1rem);
+
+          @media screen and (max-width: 768px) {
+            font-size: 1.6rem;
+          }
+
+          &::before {
+            content: "";
+
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+
+            background-color: $secondaryColor;
+
+            transform: scale(0);
+
+            transition: transform 0.5s ease-in-out;
+          }
+
+          &:hover:before,
+          &:focus:before {
+            transform: scale(1);
+          }
+          &:active:before,
+          &:active:before {
+            background-color: $activeColor;
+          }
+
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: 0;
+
+      width: 40%;
+      height: 100vh;
+
+      @include flexEdit(center, center);
+
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+
+      overflow: auto;
+
+      background-color: $accentColor;
+
+      transition: all 0.3s ease 0s;
+
+    }
+
+  }
+}
+
+
+
+
+

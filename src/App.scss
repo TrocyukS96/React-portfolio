@@ -1,0 +1,62 @@
+@import './assets/abstracts/mixins';
+@import './assets/abstracts/vars';
+
+.App {
+  background-blend-mode: screen;
+  background-blend-mode: multiply;
+  background-blend-mode: overlay;
+  background-blend-mode: darken;
+  background-blend-mode: soft-light;
+  background-blend-mode: luminosity;
+  background: linear-gradient(red, transparent),
+  linear-gradient(to top left, lime, transparent),
+  linear-gradient(to top right, blue, transparent);
+
+
+  color: $textColor;
+  width: 100%;
+  height: 100%;
+
+  overflow-x: hidden;
+}
+.lock {
+  overflow: hidden;
+}
+
+
+.container {
+  max-width: 1145px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  transition: all .3s ease;
+
+  &:hover {
+    background-color: $secondaryColor;
+    color: $textColor;
+  }
+
+  &:active {
+    background-color: $activeColor;
+
+
+    color: $textColor;
+  }
+
+}
+
+.anim-show {
+  transform: translate(0%, 120%);
+  opacity: 0;
+
+  transition: all .3s ease;
+
+}
+
+.anim-show._active,
+._active .anim-show {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
