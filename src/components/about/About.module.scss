@@ -1,0 +1,32 @@
+@import "./../../assets/abstracts/mixins";
+@import "./../../assets/abstracts/vars";
+
+.about {
+  margin-top: 100px;
+  .aboutBlocks {
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+
+    .aboutText {
+      .aboutTitle {
+        @include textEdit(Open Sans, 700, 2.3rem, 0);
+      }
+
+      .aboutDiscr {
+        @include textEdit(Open Sans, 700, 2rem, 0);
+      }
+    }
+
+    .aboutImage {
+      img {
+        height: 400px;
+        width: 300px;
+      }
+    }
+  }
+}

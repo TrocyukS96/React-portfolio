@@ -1,0 +1,19 @@
+@import "./../../assets/abstracts/mixins";
+@import "./../../assets/abstracts/vars";
+
+.skills {
+
+  .skillsTitle{
+    margin: 70px 15px;
+    @include textEdit(Open Sans, 700, 2.3rem, 0);
+
+    text-align: center;
+  }
+
+  .skillsInner{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    gap: 10px;
+  }
+}
