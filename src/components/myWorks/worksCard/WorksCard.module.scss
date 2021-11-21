@@ -1,0 +1,21 @@
+
+.worksCard{
+
+  .wrapper{
+    padding: 5px;
+    border: 2px solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .cardsTitle{}
+  }
+.cardsViewLink{}
+    .cardsView{
+      width: 200px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+}

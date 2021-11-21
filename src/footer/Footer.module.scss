@@ -1,0 +1,23 @@
+.footer {
+  .wrapper {
+    .title {
+      text-align: center;
+    }
+
+    .inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 10px;
+
+      .column {
+      }
+
+    }
+    .bottom{
+      text-align: center;
+      margin: 20px 30px;
+    }
+  }
+}

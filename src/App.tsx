@@ -3,6 +3,10 @@ import './App.scss';
 import {Header} from "./components/header/Header";
 import {About} from "./components/about/About";
 import {Skills} from "./components/skills/Skills";
+import {MyWorks} from "./components/myWorks/MyWorks";
+import {RemoteJob} from "./components/remoteJob/RemoteJob";
+import {Contacts} from "./components/contacts/Contacts";
+import {Footer} from "./footer/Footer.";
 
 function App() {
   return (
@@ -11,6 +15,10 @@ function App() {
             <Header/>
             <About/>
             <Skills/>
+            <MyWorks/>
+            <RemoteJob/>
+            <Contacts/>
+            <Footer/>
         </div>
 
     </div>
