@@ -6,7 +6,7 @@ import s from './TextArea.module.scss';
 }
 export function TextArea(props:TextAreaPropsType) {
     return(
-        <div>
+        <div className={s.inner}>
             <textarea placeholder={props.text}/>
         </div>
     )

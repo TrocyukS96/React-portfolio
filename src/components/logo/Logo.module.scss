@@ -1,0 +1,24 @@
+@import './../../assets/abstracts/mixins';
+@import './../../assets/abstracts/vars';
+
+
+.logoLink {
+  text-decoration: none;
+  color: $textColor;
+
+  .logo {
+    @include textEdit(Open Sans, 700, 1.45rem);
+
+    font-weight: bold;
+
+    span {
+      color: red;
+      font-size: 2.10rem;
+    }
+    //@media screen and (max-width: 420px) {
+    //  font-size: 1.2rem;
+    //}
+
+  }
+
+}

@@ -1,19 +1,20 @@
 import React from 'react';
 import s from './Contacts.module.scss';
 import {Input} from "../input/Input";
-import {Btn} from "../btn/Btn";
+import {SuperButton} from "../superButton/SuperButton";
 import {TextArea} from "../textArea/TextArea";
+import { Title } from '../title/Title';
 
 export function Contacts() {
     return (
         <div className={s.contacts}>
             <div className={s.wrapper}>
-                <h2 className={s.title}>Contacts</h2>
+                <Title title={'Contacts'}/>
                 <form>
-                    <Input text={'Name'}/>
-                    <Input text={'Surname'}/>
-                    <TextArea text={'Description'}/>
-                    <Btn title={'Submit'}/>
+                    <Input text={'Your name'} type={'text'}/>
+                    <Input text={'Your email'} type={'email'}/>
+                    <TextArea text={'Message'}/>
+                    <SuperButton title={'Submit'}/>
                 </form>
             </div>
         </div>

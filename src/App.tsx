@@ -11,7 +11,13 @@ import {Footer} from "./footer/Footer.";
 function App() {
   return (
     <div className="App">
+        {/*<div className="stars">*/}
+        {/*    <div id="stars"></div>*/}
+        {/*    <div id="stars2"></div>*/}
+        {/*    <div id="stars3"></div>*/}
+        {/*</div>*/}
         <div className="container">
+
             <Header/>
             <About/>
             <Skills/>

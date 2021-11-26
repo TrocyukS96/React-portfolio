@@ -1,0 +1,67 @@
+@import './../../assets/abstracts/mixins';
+@import './../../assets/abstracts/vars';
+
+.navigation {
+
+  border: 2px solid black;
+  height: 100vh;
+  width: 300px;
+
+  background: #000;
+
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+
+  transform: translateX(100%);
+
+  transition: all 0.3s ease-in-out;
+
+  opacity: 0.8;
+
+
+  .navigationList {
+    margin-top: 20%;
+
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: $textColor;
+
+      @include textEdit(Open Sans, 400, 2.10rem);
+
+    }
+
+  }
+
+  .cancelBtn {
+    transform: translate(40px, 25px);
+    font-size: 25px;
+
+    border-style: none;
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+
+    transition: all 0.1s ease-in-out;
+
+    &:active {
+      color: $activeColor;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+
+
+
+}
+.activeBtn {
+}
+.activeNav {
+  transform: translateX(0%);
+}
+

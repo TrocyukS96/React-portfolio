@@ -1,12 +1,14 @@
 import React from "react";
+import s from './Input.module.scss';
 
 type InputProsType = {
-    text:string
+    text:string,
+    type?:any
 }
 export function Input(props:InputProsType) {
     return (
-        <div>
-            <input placeholder={props.text}/>
+        <div className={s.inner}>
+            <input placeholder={props.text} type={props.type}/>
         </div>
 
         )

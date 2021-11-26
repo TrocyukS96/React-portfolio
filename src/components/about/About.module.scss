@@ -2,7 +2,8 @@
 @import "./../../assets/abstracts/vars";
 
 .about {
-  margin-top: 100px;
+  margin-top: 70px;
+
   .aboutBlocks {
     padding: 10px 0;
 
@@ -11,14 +12,19 @@
     align-items: center;
     gap: 20px;
 
+    @media screen and (max-width: 712px) {
+      margin-top: 30px;
+
+      flex-direction: column;
+
+      text-align: center;
+    }
 
     .aboutText {
-      .aboutTitle {
-        @include textEdit(Open Sans, 700, 2.3rem, 0);
-      }
-
       .aboutDiscr {
-        @include textEdit(Open Sans, 700, 2rem, 0);
+        margin-bottom: 20px;
+
+        @include textEdit(Open Sans, 700, 2rem, 30px);
       }
     }
 
@@ -29,4 +35,20 @@
       }
     }
   }
+}
+
+.changeBackground {
+  width: 100px;
+  height: 100px;
+
+
+  //margin-top: 1rem;
+  //
+  background-color: #2f4f4f;
+  //transition: .2s ease-in;
+  //
+  //&:hover {
+  //  background-color: $activeColor;
+  //}
+
 }

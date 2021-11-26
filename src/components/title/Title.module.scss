@@ -1,0 +1,28 @@
+@import "./../../assets/abstracts/mixins";
+@import "./../../assets/abstracts/vars";
+
+.title{
+  display: inline-flex;
+
+  margin-bottom: 60px;
+
+  @include textEdit(Open Sans, 700, 2.3rem, 0);
+
+  position: relative;
+
+  text-transform: uppercase;
+
+  &::after{
+    content:'';
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $activeColor;
+
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+
+  }
+}

@@ -7,6 +7,7 @@ import bhakti from './../../assets/images/bhakti.jpg';
 import freedom from './../../assets/images/freedom.jpg';
 import olof from './../../assets/images/olof.jpg';
 import nature from './../../assets/images/viewOfNature.jpg';
+import {Title} from "../title/Title";
 
 let discr = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dicta dolore eaque enim est id laborum minima, molestias nam nobis, officia optio perspiciatis placeat quam sequi sint ut vel voluptate?'
 
@@ -14,15 +15,15 @@ export function MyWorks() {
   return (
     <div className={s.works}>
         <div className={s.wrapper}>
-            <h2 className={s.worksTitle}>My works</h2>
+           <Title title={'My works'}/>
             <div className={s.worksInner}>
-                <WorksCard title={'nature'} image={nature} text={discr}/>
-                <WorksCard title={'childhood'} image={childhood} text={discr}/>
-                <WorksCard title={'bhakti'} image={bhakti} text={discr}/>
-                <WorksCard title={'freedom'} image={freedom} text={discr}/>
-                <WorksCard title={'olof'} image={olof} text={discr}/>
-                <WorksCard title={'childhood'} image={childhood} text={discr}/>
-                <WorksCard title={'nature'} image={nature} text={discr}/>
+                <WorksCard title={'nature'} image={nature} />
+                <WorksCard title={'childhood'} image={childhood} />
+                <WorksCard title={'bhakti'} image={bhakti} />
+                <WorksCard title={'freedom'} image={freedom}/>
+                <WorksCard title={'olof'} image={olof} />
+                <WorksCard title={'childhood'} image={childhood} />
+                <WorksCard title={'nature'} image={nature} />
             </div>
         </div>
 
