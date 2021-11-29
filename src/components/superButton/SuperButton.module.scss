@@ -4,17 +4,21 @@
 
 
 .btn {
-
   width: 164px;
   height: 54px;
 
   box-shadow: -11.09px 18.13px 36.6483px rgba(242, 153, 74, 0.23);
-  border-radius: 3px;
+  border-radius: 17px;
+
+  @include text-edit(Poppins, 600, 1.4rem, 1.6);
+  //color:$darkThemeColor;
+  color:black;
 
   transition: all .2s ease-in-out;
-
   &:hover {
-    background-color: $activeColor;
+
+
+    background-color: $backgroundOnHoverColor;
   }
 
 }

@@ -1,0 +1,211 @@
+@import './../../assets/abstracts/mixins';
+@import './../../assets/abstracts/vars';
+
+
+.aboutMe {
+  @media screen and (max-width: 1180px) {
+    background-color: $darkThemeColor;
+    height: 100%;
+
+  }
+
+  .wrapper {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: 1180px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-flow: row;
+
+    }
+
+    .content {
+      height: 99vh;
+
+      padding-left: 200px;
+
+      background-color: $darkThemeColor;
+
+      @media screen and (max-width: 1180px) {
+        height: 100%;
+        margin: 0 auto;
+
+        padding-left: 0;
+
+        background-color: inherit;
+
+      }
+      @media screen and (max-width: 600px) {
+        padding: 0 10px;
+        margin: 55px auto 0;
+
+        text-align: center;
+      }
+
+      .aboutTitle {
+        position: relative;
+        z-index: 2;
+        font-weight: 700;
+
+        @media screen and (max-width: 1380px) {
+          font-size: 4rem;
+
+        }
+        @media screen and (max-width: 1180px) {
+          margin-top: 0;
+
+          text-align: center;
+
+          transform: translateX(60px);
+
+        }
+        @media screen and (max-width: 600px) {
+          display: inline;
+
+          margin-top: 60px;
+
+          transform: translateX(60px);
+
+          line-height: 69px;
+
+        }
+        @media screen and (max-width: 400px) {
+          font-size: 3rem;
+
+        }
+
+        &::before {
+          content: 'ABOUT ME';
+
+          position: absolute;
+          top: 15px;
+          left: 0;
+          z-index: -1;
+
+          color: $lightThemeColor;
+          @include text-edit(SF UI Display, 500, 6rem, 100px);
+
+          font-weight: bold;
+
+          opacity: 0.7;
+
+          @media screen and (max-width: 1380px) {
+            font-size: 4rem;
+
+          }
+          @media screen and (max-width: 1180px) {
+            top: 16px;
+            left: 58px;
+
+          }
+          @media screen and (max-width: 600px) {
+            display: none;
+
+          }
+
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include text-edit(SF UI Display, 600, 1.4rem, 5.5);
+        text-transform: uppercase;
+        color: #bdbdbd;
+
+
+      }
+
+      .text {
+        max-width: 500px;
+        color: $textColor;
+
+        @include text-edit(Poppins, 600, 1.4rem, 1.5);
+
+        @media screen and (max-width: 600px) {
+          max-width: 500px;
+
+          text-align: center;
+
+        }
+      }
+
+      .link {
+        display: block;
+
+        margin-top: 60px;
+
+        width: 164px;
+        height: 54px;
+
+        box-shadow: -11.09px 18.13px 36.6483px rgba(217, 185, 158, 0.23);
+        border-radius: 17px;
+
+        @include text-edit(Poppins, 600, 1.4rem, 50px);
+
+        background-color: $lightThemeColor;
+
+        color: $darkThemeColor;
+
+        text-transform: none;
+        text-decoration: none;
+        text-align: center;
+
+        transition: all .3s ease-in-out;
+
+
+        &:hover {
+          color: $textColor;
+        }
+
+        &:active {
+          background-color: $onActiveColor;
+        }
+
+        @media screen and (max-width: 600px) {
+          box-shadow: none;
+
+          margin-left: 47%;
+          margin-top: 30px;
+
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .view {
+      background-color: $lightThemeColor;
+
+      padding-top: 100px;
+
+      text-align: center;
+
+      @media screen and (max-width: 1180px) {
+        padding-top: 60px;
+
+        background-color: inherit;
+
+      }
+      @media screen and (max-width: 600px) {
+        padding-top: 10px;
+      }
+
+      img {
+        width: 500px;
+        height: 500px;
+
+        object-fit: cover;
+
+
+        @media screen and (max-width: 1280px) {
+          width: 100%;
+          height: 100%;
+
+        }
+      }
+    }
+  }
+}

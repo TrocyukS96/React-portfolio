@@ -1,0 +1,64 @@
+@import './../../assets/abstracts/mixins';
+@import './../../assets/abstracts/vars';
+
+.burger {
+  position: fixed;
+
+  left: 20px;
+  top: 20px;
+
+  height: 30px;
+  width: 50px;
+
+  cursor: pointer;
+
+  transition: all .3s ease-in-out;
+
+  visibility: hidden;
+
+  @media screen and (max-width: 1180px){
+    visibility: visible;
+  }
+
+
+  &::before, &::after {
+    content: '';
+
+    background-color: $textColor;
+    width: 40px;
+    height: 2px;
+
+    position: absolute;
+    left: 0;
+
+
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+
+  span {
+    width: 40px;
+    height: 2px;
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    background-color: $textColor;
+
+    transform: translateY(-50%);
+  }
+
+  //&:active::before, &:active::after, & span:active {
+  //  background-color: red;
+  //}
+
+}

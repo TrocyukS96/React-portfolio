@@ -1,14 +1,19 @@
-import React from "react";
+import React from 'react';
 import s from './NavItem.module.scss';
 
 type NavItemPropsType = {
-    title: string
+    text:string
+    icon:any
 }
-
-export function NavItem(props: NavItemPropsType) {
+export const NavItem = (props:NavItemPropsType) => {
     return (
-        <li className={s.navItem}>
-            <a className="navigation__link" href="#about">{props.title}</a>
-        </li>
-    )
+        <a href="#" className={s.navLink}>
+            <li className={s.navItem }>
+                <img className={s.navImg} src={props.icon} alt={props.text}/>
+                <span className={s.navText}>
+                   {props.text}
+                </span>
+            </li>
+        </a>
+    );
 }

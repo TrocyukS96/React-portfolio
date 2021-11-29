@@ -5,7 +5,7 @@ import s from './SuperButton.module.scss';
 type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
 type SuperButtonPropsType = DefaultButtonPropsType & {
-    title: string
+    text: string
     className?: any
     variant?:any
 }
@@ -16,8 +16,9 @@ export const SuperButton: React.FC<SuperButtonPropsType> = ({
                                                      }) => {
     const finalClassName = `${s.btn} ${className}`;
     return (
+
         <button className={finalClassName} >
-            {restProps.title}
+            {restProps.text}
         </button>
     )
     // )

@@ -1,67 +1,128 @@
 @import './../../assets/abstracts/mixins';
 @import './../../assets/abstracts/vars';
 
-.navigation {
 
-  border: 2px solid black;
-  height: 100vh;
-  width: 300px;
+.nav {
+  padding-left: 20px;
 
-  background: #000;
+  width: 180px;
+  //height: 100%;
 
   position: fixed;
-  right: 0;
-  bottom: 0;
+  left: 0;
   top: 0;
-  z-index: 10;
+  bottom: 0;
 
-  transform: translateX(100%);
+  //background-color: $lightThemeColor;
 
-  transition: all 0.3s ease-in-out;
+  @include flex-edit(center, baseline, column);
 
-  opacity: 0.8;
+  &.active {
+    width: 100%;
+    height: 100vh;
+
+    background-color: $darkThemeColor;
+    z-index: 100;
+
+  }
+
+  .desktopList {
+    @media screen and (max-width: 1180px) {
+      display: none;
+    }
+  }
 
 
-  .navigationList {
-    margin-top: 20%;
-
+  .mobileList {
     list-style: none;
 
-    a {
-      text-decoration: none;
-      color: $textColor;
+    margin: 0 auto;
 
-      @include textEdit(Open Sans, 400, 2.10rem);
+   display: none;
+
+    transition: all .3s ease-in-out;
+
+    &.active{
+     display: block;
+    }
+
+    @media screen and (min-width: 1180px) {
+      display: none;
+    }
+
+
+    .mobileLink {
+      display: block;
+      position: relative;
+
 
     }
 
-  }
+    .mobileItem {
+      height: 50px;
+      width: 226px;
 
-  .cancelBtn {
-    transform: translate(40px, 25px);
-    font-size: 25px;
+      margin-top: 30px;
 
-    border-style: none;
-    padding: 0;
-    color: inherit;
-    background-color: transparent;
+      background-color: white;
 
-    transition: all 0.1s ease-in-out;
+      @include flex-edit(space-around, center, raw);
 
-    &:active {
-      color: $activeColor;
+      border-radius: 30px;
+
+      transition: all .3s ease-in-out;
+
+      &:hover{
+        background-color: $lightThemeColor;
+      }
+      &:active{
+        color:$onActiveColor;
+      }
+
+
+      span {
+        display: block;
+
+        height: 50px;
+        width: 40px;
+
+        //margin-left: 38px;
+
+        text-align: center;
+
+        position: absolute;
+        top: 28%;
+
+        @include text-edit(SF UI Display, 500, 1.4rem, 1);
+
+
+      }
+    }
+
+    .mobileImage {
+      width: 30px;
+      height: 30px;
+
+      margin-right: 110px;
+
+      object-fit: cover;
+
+      position: relative;
+      z-index: 1;
+    }
+
+    .cancel{
+      position: absolute;
+      left: 20px;
+      top: 20px;
+
+      font-size: 30px;
+      color:$textColor;
+
+      transition: all .2s ease-in-out;
+      &:active{
+        color:$onActiveColor;
+      }
     }
   }
-  @media screen and (max-width: 500px) {
-    width: 100%;
-  }
-
-
-
 }
-.activeBtn {
-}
-.activeNav {
-  transform: translateX(0%);
-}
-

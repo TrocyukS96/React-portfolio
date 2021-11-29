@@ -1,0 +1,16 @@
+@mixin text-edit ($fontFamily:SF UI Display, $fontWeight, $fontSize, $lineHeight: 1.2) {
+  font-family: $fontFamily;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+
+@mixin flex-edit ($justifyContent, $alignItems, $flexDirection:raw) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $flexDirection;
+
+
+}
