@@ -1,0 +1,63 @@
+@import './../../../assets/abstracts/mixins';
+@import './../../../assets/abstracts/vars';
+
+
+.skillItem{
+  padding: 15px 0 20px;
+
+  @include flex-edit(center, center, column);
+
+  border:2px solid white;
+
+  position: relative;
+
+  //background-color: $darkThemeColor;
+
+  background-image: url('./../../../assets/images/skills/codingBG.jpg');
+
+  text-align: center;
+
+  &::before{
+    content:'';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+
+    background-color: $darkThemeColor;
+
+    opacity: .6;
+
+    transition: .3s ease-in-out;
+  }
+  &:hover::before{
+    opacity: 0;
+  }
+
+  .title{
+    margin: 0 0 25px 0;
+
+    @include text-edit(SF UI Display, 500, 3.25rem, 70px );
+    color:$textColor;
+  }
+  .iconImg{
+    width: 65px;
+    height: 65px;
+
+    position: absolute;
+    right: 20px;
+    top: 30px;
+
+    object-fit: cover;
+  }
+  .text{
+    margin: 30px 0 0;
+
+    max-width: 330px;
+
+    @include text-edit(SF UI Display, 500, 1.25rem, 30px );
+    color:$textColor;
+  }
+}

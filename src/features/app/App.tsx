@@ -4,6 +4,7 @@ import {AboutMe} from "../aboutMe/AboutMe";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Navigation} from "../../components/navigation/Navigation";
 import {BurgerButton} from "../../components/burgerButton/BurgerButton";
+import {Skills} from "../skills/Skills";
 
 export const App = () => {
 
@@ -14,6 +15,7 @@ export const App = () => {
                     <Navigation active={active} setActive={setActive}/>
                     <BurgerButton setActive={setActive} active={active}/>
                     <AboutMe/>
+                    <Skills/>
                 </div>
 
             </div>

@@ -18,5 +18,30 @@
 
   color:$textColor;
 
+  @media screen and (max-width: 1380px) {
+    font-size: 4rem;
 
+  }
+  @media screen and (max-width: 1180px) {
+    margin-top: 0;
+
+    text-align: center;
+
+    transform: translateX(60px);
+
+  }
+  @media screen and (max-width: 600px) {
+    display: inline;
+
+    margin-top: 60px;
+
+    transform: translateX(60px);
+
+    line-height: 69px;
+
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 3rem;
+
+  }
 }
