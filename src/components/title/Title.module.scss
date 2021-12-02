@@ -31,13 +31,14 @@
 
   }
   @media screen and (max-width: 600px) {
-    display: inline;
+    //display: inline;
 
     margin-top: 60px;
 
     transform: translateX(60px);
 
     line-height: 69px;
+    font-size: 54px;
 
   }
   @media screen and (max-width: 400px) {

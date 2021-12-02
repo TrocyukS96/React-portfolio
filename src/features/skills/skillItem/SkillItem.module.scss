@@ -3,6 +3,8 @@
 
 
 .skillItem{
+  width: 450px;
+
   padding: 15px 0 20px;
 
   @include flex-edit(center, center, column);
@@ -16,6 +18,18 @@
   background-image: url('./../../../assets/images/skills/codingBG.jpg');
 
   text-align: center;
+  @media screen and (max-width: 1520px) {
+    width: 550px;
+  }
+  @media screen and (max-width: 620px) {
+    width: 470px;
+  }
+  @media screen and (max-width: 580px) {
+    width: 370px;
+  }
+  @media screen and (max-width: 420px) {
+    width: 270px;
+  }
 
   &::before{
     content:'';
@@ -31,6 +45,10 @@
     opacity: .6;
 
     transition: .3s ease-in-out;
+
+    @media screen and (max-width: 760px){
+      opacity: 0;
+    }
   }
   &:hover::before{
     opacity: 0;

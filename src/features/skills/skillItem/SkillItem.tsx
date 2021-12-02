@@ -21,7 +21,7 @@ export const SkillItem = (props: SkillItemPropsType) => {
             <h3 className={s.title}>
                 {props.title ? props.title : 'Important skill'}
             </h3>
-            <img className={s.iconImg} src={props.icon ? props.icon : someIcon} alt={props.icon}/>
+            {/*<img className={s.iconImg} src={props.icon ? props.icon : someIcon} alt={props.icon}/>*/}
             {/*<CircularProgressbar percentage={percentage} text={`${percentage}%`} />;*/}
             <div style={{ width: 200, height: 200 }}>
                 <CircularProgressbar value={props.percentage ? props.percentage : percentage} text={`${props.percentage ? props.percentage : percentage}%`} />
