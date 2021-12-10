@@ -3,9 +3,9 @@
 
 .burger {
   position: fixed;
-
   left: 20px;
   top: 20px;
+  z-index: 1001 ;
 
   height: 30px;
   width: 50px;
@@ -19,6 +19,8 @@
   @media screen and (max-width: 1180px){
     visibility: visible;
   }
+
+
 
 
   &::before, &::after {
@@ -60,5 +62,8 @@
   //&:active::before, &:active::after, & span:active {
   //  background-color: red;
   //}
+  &.active{
+    display: none;
+  }
 
 }

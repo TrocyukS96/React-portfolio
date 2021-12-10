@@ -10,7 +10,7 @@ export const BurgerButton = (props:BurgerButtonPropsType)=> {
         props.setActive(!props.active)
     }
     return (
-        <div className={s.burger}  onClick={onClickToggleClass}>
+        <div className={props.active ? s.burger + ' ' + s.active: s.burger}  onClick={onClickToggleClass}>
             <span></span>
         </div>
     );

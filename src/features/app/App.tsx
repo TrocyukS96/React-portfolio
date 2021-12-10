@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import s from './App.module.scss';
 import {AboutMe} from "../aboutMe/AboutMe";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Navigation} from "../../components/navigation/Navigation";
 import {BurgerButton} from "../../components/burgerButton/BurgerButton";
 import {Skills} from "../skills/Skills";
+import {Projects} from "../projects/Projects";
+import {Contacts} from "../contacts/Contacts";
 
 export const App = () => {
 
@@ -15,7 +16,13 @@ export const App = () => {
                     <Navigation active={active} setActive={setActive}/>
                     <BurgerButton setActive={setActive} active={active}/>
                     <AboutMe/>
-                    <Skills/>
+                    <div className={s.container}>
+                        <Skills/>
+                        <Projects/>
+                        <Contacts/>
+                    </div>
+
+
                 </div>
 
             </div>

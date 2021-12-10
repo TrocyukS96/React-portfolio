@@ -1,0 +1,43 @@
+@import './../../assets/abstracts/mixins';
+@import './../../assets/abstracts/vars';
+
+.link {
+  display: block;
+
+  margin-top: 60px;
+
+  width: 164px;
+  height: 54px;
+
+  box-shadow: -11.09px 18.13px 36.6483px rgba(217, 185, 158, 0.23);
+  border-radius: 17px;
+
+  @include text-edit(Poppins, 600, 1.4rem, 50px);
+
+  background-color: $lightThemeColor;
+
+  color: $darkThemeColor;
+
+  text-transform: none;
+  text-decoration: none;
+  text-align: center;
+
+  transition: all .3s ease-in-out;
+
+
+  &:hover {
+    color: $textColor;
+  }
+
+  &:active {
+    background-color: $onActiveColor;
+  }
+
+
+  @media screen and (max-width: 1180px) {
+    margin: 60px auto 20px;
+  }
+  @media screen and (max-width: 600px) {
+    box-shadow: none;
+  }
+}

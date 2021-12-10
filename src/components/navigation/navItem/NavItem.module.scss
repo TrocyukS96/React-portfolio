@@ -134,8 +134,15 @@
   &:hover .navItem {
     background-color: $lightThemeColor;
   }
+  //&:active .navItem  {
+  //  background-color: $onActiveColor;
+  //}
+  &:active .navText  {
+    background-color: $onActiveColor;
+  }
 
   &.active {
     pointer-events: none;
+
   }
 }
