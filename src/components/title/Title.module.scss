@@ -2,13 +2,8 @@
 @import "./../../assets/abstracts/vars";
 
 .title{
-  margin-top: 10px;
-
-  max-width: 200px;
 
   display: block;
-
-  margin-bottom: 60px;
 
   @include text-edit(SF UI Display, 500, 5.25rem, 100px );
 

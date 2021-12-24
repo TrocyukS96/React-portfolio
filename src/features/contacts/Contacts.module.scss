@@ -1,0 +1,161 @@
+@import './../../assets/abstracts/mixins';
+@import './../../assets/abstracts/vars';
+
+.contacts{
+  padding: 30px 0 50px;
+
+  color:white;
+
+  box-sizing: border-box;
+  .contactsTitle{
+    width: 100%;
+
+    text-align: center;
+  }
+  .wrapper{
+    display:flex;
+    justify-content: space-between;
+    .content{
+      max-width: 600px;
+      margin-left: 5px;
+      .textBlock{
+        .textBlockTitle{
+          margin-bottom: 10px;
+          @include text-edit(SF UI Display, 500, 3.25rem);
+
+          text-transform: uppercase;
+          span{
+            color:$lightThemeColor;
+          }
+        }
+        .description{
+          @include text-edit(Poppins, 500, 1.4rem, 1.5rem);
+        }
+      }
+      .contactsList{
+        list-style: none;
+      }
+    }
+    .formBlock{
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 5px;
+      padding-top: 13px;
+
+      input, textarea{
+        border: 1px solid #111;
+        width: 100%;
+        background: #252525;
+        color: #fff;
+        padding: 11px 26px;
+        border-radius: 30px;
+        outline: none!important;
+        transition: .3s;
+
+        @include text-edit(Poppins, 400, 1.3rem, 1.5rem);
+
+        &::placeholder {
+          @include text-edit(Poppins, 400, 1.0rem, 1.5rem);
+
+          text-transform: uppercase;
+          color: #fff;
+
+          opacity: .6;
+        }
+      }
+      p{
+        margin-bottom: 20px;
+      }
+
+      .inputNameWrapper{
+        display: flex;
+        gap: 20px;
+        .name{}
+        .email{}
+      }
+      .inputSubjectWrapper{
+        .subject{
+          width: 94%;
+        }
+      }
+      .inputTextAreaWrapper{
+        .textarea{
+          resize: vertical;
+
+          width: 94%;
+
+          border: 1px solid #111;
+          padding: 12px 26px;
+          height: 200px;
+          overflow: hidden;
+          border-radius: 30px;
+        }
+      }
+      .sendBtn{
+        margin-bottom: 10px;
+
+        display: inline-block;
+
+        @include text-edit(Poppins, 400, 1.0rem, 1.4);
+
+        overflow: hidden;
+
+        border-radius: 35px;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: center;
+        cursor: pointer;
+        vertical-align: middle;
+        transition: all .25s ease-in-out;
+        text-transform: uppercase;
+        text-decoration: none!important;
+        position: relative;
+        z-index: 1;
+        padding: 16px 70px 16px 35px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+        background-color: transparent;
+        outline: none!important;
+        cursor: pointer!important;
+        border:1px solid $lightThemeColor;
+
+        &:active{
+          border:1px solid $onActiveColor;
+        }
+
+        .sendBtnImg{
+          position: absolute;
+          right: -1px;
+          top: -1px;
+          bottom: 0;
+          width: 55px;
+          height: 55px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 19px;
+          color: #fff;
+          border-radius: 50%;
+          background-color: $lightThemeColor;
+          transition: .3s ease;
+
+
+          img{
+            width: 100px;
+            height: 100px;
+          }
+        }
+        &:active{
+          .sendBtnImg{
+            background-color: $onActiveColor;
+          }
+
+        }
+      }
+    }
+  }
+
+
+}

@@ -4,6 +4,8 @@ import {Title} from "../../components/title/Title";
 import funnyImage from '../../assets/images/temporaryImages/funnyMonkey.jpg';
 import {ProjectCard} from "./projectCard/ProjectCard";
 
+let projectImages =
+    [funnyImage, funnyImage,funnyImage, funnyImage, funnyImage, funnyImage, funnyImage]
 
 export const Projects = () => {
 
@@ -12,14 +14,11 @@ export const Projects = () => {
             <div className={s.wrapper}>
                 <Title title={'My projects'} className={s.projectsTitle}/>
                 <div className={s.cardsInner}>
-                    <ProjectCard cardImage={funnyImage}/>
-                    <ProjectCard cardImage={funnyImage}/>
-                    <ProjectCard cardImage={funnyImage}/>
-                    <ProjectCard cardImage={funnyImage}/>
-                    <ProjectCard cardImage={funnyImage}/>
-                    <ProjectCard cardImage={funnyImage}/>
-                    <ProjectCard cardImage={funnyImage}/>
-                    <ProjectCard cardImage={funnyImage}/>
+                    {projectImages.map((p, i)=>{
+                        return(
+                            <ProjectCard cardImage={p}/>
+                        )
+                    })}
                 </div>
             </div>
         </div>
