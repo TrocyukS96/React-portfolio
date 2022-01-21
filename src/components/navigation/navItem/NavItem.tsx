@@ -4,14 +4,17 @@ import s from './NavItem.module.scss';
 type NavItemPropsType = {
     text:string
     icon:any
+    navData:string
+
 }
 export const NavItem = (props:NavItemPropsType) => {
+    const {text, icon, navData}= props
     return (
-        <a href="#" className={s.navLink}>
+        <a href={'#'+navData} className={s.navLink} >
             <li className={s.navItem }>
-                <img className={s.navImg} src={props.icon} alt={props.text}/>
+                <img className={s.navImg} src={icon} alt={text}/>
                 <span className={s.navText}>
-                   {props.text}
+                   {text}
                 </span>
             </li>
         </a>

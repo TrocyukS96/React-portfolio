@@ -14,7 +14,7 @@ export const AboutMe = ()=> {
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, laboriosam!
                     </p>
 
-                    <a href="#" className={s.link}> Download CV</a>
+                    <a href="./../../assets/download/Stanislav_Trocyuk_-_Front-end_developer.pdf" download className={s.link}> Download CV</a>
                     {/*<SuperLink text={'Download CVfff'} />*/}
                 </div>
                 <div className={s.view}>

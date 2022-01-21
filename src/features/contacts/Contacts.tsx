@@ -12,7 +12,7 @@ export const Contacts = () => {
 
 
     return (
-        <div className={s.contacts}>
+        <div className={s.contacts} id={'Contacts'}>
             <Title title={' Get in touch'} className={s.contactsTitle}/>
             <div className={s.wrapper}>
                 <div className={s.content}>

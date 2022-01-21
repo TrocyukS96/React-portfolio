@@ -10,7 +10,7 @@ let projectImages =
 export const Projects = () => {
 
     return (
-        <div className={s.projects}>
+        <div className={s.projects} id={'Portfolio'}>
             <div className={s.wrapper}>
                 <Title title={'My projects'} className={s.projectsTitle}/>
                 <div className={s.cardsInner}>

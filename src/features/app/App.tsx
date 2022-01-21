@@ -6,6 +6,7 @@ import {BurgerButton} from "../../components/burgerButton/BurgerButton";
 import {Skills} from "../skills/Skills";
 import {Projects} from "../projects/Projects";
 import {Contacts} from "../contacts/Contacts";
+import {Footer} from "../footer/Footer";
 
 export const App = () => {
 
@@ -17,9 +18,10 @@ export const App = () => {
                     <BurgerButton setActive={setActive} active={active}/>
                     <AboutMe/>
                     <div className={s.container}>
-                        <Skills/>
+                        <Skills />
                         <Projects/>
                         <Contacts/>
+                        <Footer/>
                     </div>
 
 

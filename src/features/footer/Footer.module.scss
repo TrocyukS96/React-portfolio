@@ -1,0 +1,16 @@
+@import './../../assets/abstracts/mixins';
+@import './../../assets/abstracts/vars';
+
+.footer{
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include text-edit(SF UI Display, 500, 1.25rem);
+  color:$textColor;
+
+  text-align: center;
+
+}

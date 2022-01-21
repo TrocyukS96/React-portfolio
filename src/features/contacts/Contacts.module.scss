@@ -1,55 +1,137 @@
 @import './../../assets/abstracts/mixins';
 @import './../../assets/abstracts/vars';
 
-.contacts{
-  padding: 30px 0 50px;
+.contacts {
+  padding: 30px 10px 50px;
 
-  color:white;
+  color: white;
 
   box-sizing: border-box;
-  .contactsTitle{
+
+  @media screen and (max-width: 600px){
+    padding-top: 0;
+  }
+
+  .contactsTitle {
     width: 100%;
 
     text-align: center;
+
+    @media screen and (max-width: 1200px) {
+      transform: translateX(0);
+    }
+    @media screen and (max-width: 640px) {
+      margin-top: 0px;
+    }
   }
-  .wrapper{
-    display:flex;
+
+  input, textarea, select {
+    width: 150px;
+    margin: 0;
+
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+  }
+
+  .wrapper {
+    display: flex;
     justify-content: space-between;
-    .content{
+
+    @media screen and (max-width: 1000px) {
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .content {
       max-width: 600px;
       margin-left: 5px;
-      .textBlock{
-        .textBlockTitle{
+
+      @media screen and (max-width: 1000px) {
+        max-width: 100%;
+
+        display: flex;
+        justify-content: space-around;
+      }
+      @media screen and (max-width: 600px) {
+        max-width: 100%;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .textBlock {
+        .textBlockTitle {
           margin-bottom: 10px;
           @include text-edit(SF UI Display, 500, 3.25rem);
 
           text-transform: uppercase;
-          span{
-            color:$lightThemeColor;
+
+          span {
+            color: $lightThemeColor;
+          }
+
+          @media screen and (max-width: 640px) {
+            font-size: 2.2rem;
           }
         }
-        .description{
+
+        .description {
           @include text-edit(Poppins, 500, 1.4rem, 1.5rem);
         }
+        @media screen and (max-width: 1000px) {
+          max-width: 440px;
+        }
+        @media screen and (max-width: 640px) {
+          max-width: 300px;
+
+          margin-top: 13px;
+        }
+        @media screen and (max-width: 600px) {
+
+          text-align: center;
+          max-width: 500px;
+
+        }
       }
-      .contactsList{
+
+      .contactsList {
         list-style: none;
+
+        @media screen and (max-width: 1000px) {
+          max-width: 270px;
+
+          margin-left: 10px;
+        }
       }
     }
-    .formBlock{
-      width: 100%;
+
+    .formBlock {
+      min-width: 550px;
       padding-left: 20px;
       padding-right: 5px;
       padding-top: 13px;
+      @media screen and (max-width: 1000px) {
+        min-width: 90%;
+        margin: 0 auto;
+        padding: 20px 10px 0;
 
-      input, textarea{
+        text-align: center;
+
+      }
+
+
+
+
+      input, textarea {
         border: 1px solid #111;
         width: 100%;
         background: #252525;
         color: #fff;
         padding: 11px 26px;
         border-radius: 30px;
-        outline: none!important;
+        outline: none !important;
         transition: .3s;
 
         @include text-edit(Poppins, 400, 1.3rem, 1.5rem);
@@ -62,24 +144,33 @@
 
           opacity: .6;
         }
+
+
       }
-      p{
+
+      p {
         margin-bottom: 20px;
       }
 
-      .inputNameWrapper{
+      .inputNameWrapper {
         display: flex;
-        gap: 20px;
-        .name{}
-        .email{}
+        gap: 3%;
+        .name, .email {
+          width: 45.5%;
+          @media screen and (max-width: 1000px) {
+            width: 100%;
+          }
+        }
       }
-      .inputSubjectWrapper{
-        .subject{
+
+      .inputSubjectWrapper {
+        .subject {
           width: 94%;
         }
       }
-      .inputTextAreaWrapper{
-        .textarea{
+
+      .inputTextAreaWrapper {
+        .textarea {
           resize: vertical;
 
           width: 94%;
@@ -91,7 +182,8 @@
           border-radius: 30px;
         }
       }
-      .sendBtn{
+
+      .sendBtn {
         margin-bottom: 10px;
 
         display: inline-block;
@@ -109,7 +201,7 @@
         vertical-align: middle;
         transition: all .25s ease-in-out;
         text-transform: uppercase;
-        text-decoration: none!important;
+        text-decoration: none !important;
         position: relative;
         z-index: 1;
         padding: 16px 70px 16px 35px;
@@ -117,15 +209,14 @@
         font-weight: 600;
         color: #fff;
         background-color: transparent;
-        outline: none!important;
-        cursor: pointer!important;
-        border:1px solid $lightThemeColor;
+        outline: none !important;
+        border: 1px solid $lightThemeColor;
 
-        &:active{
-          border:1px solid $onActiveColor;
+        &:active {
+          border: 1px solid $onActiveColor;
         }
 
-        .sendBtnImg{
+        .sendBtnImg {
           position: absolute;
           right: -1px;
           top: -1px;
@@ -142,16 +233,22 @@
           transition: .3s ease;
 
 
-          img{
+          img {
             width: 100px;
             height: 100px;
           }
         }
-        &:active{
-          .sendBtnImg{
+
+        &:active {
+          .sendBtnImg {
             background-color: $onActiveColor;
           }
 
+        }
+      }
+      .subject, .textarea{
+        @media screen and (max-width: 1000px) {
+          min-width: 100%;
         }
       }
     }
