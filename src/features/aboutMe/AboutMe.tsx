@@ -2,11 +2,12 @@ import React from 'react';
 import s from './AboutMe.module.scss';
 import {Title} from "../../components/title/Title";
 import myView from './../../assets/images/about/myview.jpg';
+import somePhoto from './../../assets/images/about/otherPhoto.jpg';
 import {SuperLink} from "../../components/superLink/SuperLink";
 
 export const AboutMe = ()=> {
     return (
-        <div className={s.aboutMe}>
+        <div className={s.aboutMe} id={'Home'}>
             <div className={s.wrapper}>
                 <div className={s.content}>
                     <Title title={'Trocyuk Stanislav'} className={s.aboutTitle}/>
@@ -18,7 +19,7 @@ export const AboutMe = ()=> {
                     {/*<SuperLink text={'Download CVfff'} />*/}
                 </div>
                 <div className={s.view}>
-                    <img src={myView} alt="person-view"/>
+                    <img src={somePhoto} alt="person-view"/>
                 </div>
             </div>
 

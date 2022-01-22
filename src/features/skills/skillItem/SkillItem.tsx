@@ -1,30 +1,44 @@
 import s from './SkillItem.module.scss';
-
-import someIcon from './../../../assets/images/icons/home-icon.png';
-
 import 'react-circular-progressbar/dist/styles.css';
 import {CircularProgressbar} from "react-circular-progressbar";
+import { ProgressProvider } from './ProgressProvider';
 
 type SkillItemPropsType = {
     title?: string
     icon?: any
     text?: string
-    percentage?:number
+    percentage: number
 
+}
+const bstyles = {
+    backgroundColor: "#3e98c7",
+    textColor: "#fff",
+    pathColor: "#fff",
+    trailColor: "transparent"
 }
 
 export const SkillItem = (props: SkillItemPropsType) => {
-    const percentage = 66;
 
     return (
         <div className={s.skillItem}>
             <h3 className={s.title}>
                 {props.title ? props.title : 'Important skill'}
             </h3>
-            {/*<img className={s.iconImg} src={props.icon ? props.icon : someIcon} alt={props.icon}/>*/}
-            {/*<CircularProgressbar percentage={percentage} text={`${percentage}%`} />;*/}
-            <div style={{ width: 200, height: 200 }}>
-                <CircularProgressbar value={props.percentage ? props.percentage : percentage} text={`${props.percentage ? props.percentage : percentage}%`} />
+
+            <div style={{width: 200, height: 200}}>
+                {/*<CircularProgressbar value={props.percentage ? props.percentage : percentage} text={`${props.percentage ? props.percentage : percentage}%`} />*/}
+                {/*<CircularProgressbar*/}
+                {/*    value={props.percentage}*/}
+                {/*    text={`${props.percentage}%`}*/}
+                {/*    background*/}
+                {/*    backgroundPadding={6}*/}
+
+                {/*/>*/}
+
+                <ProgressProvider valueStart={0} valueEnd={props.percentage}>
+                    {(value:number) => <CircularProgressbar value={value}/>}
+                </ProgressProvider>
+
             </div>
             <p className={s.text}>{props.text ? props.text : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quod?'}</p>
 
