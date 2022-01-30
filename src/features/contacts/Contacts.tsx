@@ -5,11 +5,46 @@ import addressIcon from './../../assets/images/contacts/adress-icon.png';
 import callIcon from './../../assets/images/contacts/call-icon.jpg';
 import mailIcon from './../../assets/images/contacts/mail-icon.png';
 import sendIcon from './../../assets/images/contacts/send-icon.png';
-
 import s from './Contacts.module.scss';
+import {useFormik} from "formik";
+import {useDispatch} from "react-redux";
+import {sendMessage} from "../bll/contactsReducer";
+
+//types
+type FormikErrorType = {
+    email?: string
+    name?: string
+    message?: string
+}
 
 export const Contacts = () => {
-
+        const dispatch = useDispatch()
+        const formik = useFormik({
+            initialValues: {
+                email: '',
+                name: '',
+                message: ''
+            },
+            validate: (values) => {
+                const errors: FormikErrorType = {};
+                if (!values.email) {
+                    errors.email = 'Required';
+                } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+                    errors.email = 'Invalid email address';
+                }
+                // if (!values.password) {
+                //     errors.password = 'Required';
+                // } else if (values.password.length <= 3 || values.password.length > 20) {
+                //     errors.password = 'password should consist from 3 to 20 symbols'
+                // }
+                return errors;
+            },
+            onSubmit: values => {
+                dispatch(sendMessage(values))
+                console.log(values)
+                formik.resetForm()
+            },
+        })
 
     return (
         <div className={s.contacts} id={'Contacts'}>
@@ -37,17 +72,43 @@ export const Contacts = () => {
                         />
                     </ul>
                 </div>
-                <form className={s.formBlock}>
+                <form className={s.formBlock} onSubmit={formik.handleSubmit}>
                     <p className={s.inputNameWrapper}>
-                        <input className={s.name} type="text" placeholder={'YOUR NAME'}/>
-                        <input className={s.email} type="email" placeholder={'YOUR EMAIL'}/>
+                        <input
+                            className={s.name}
+                            type="text"
+                            placeholder={'YOUR NAME'}
+                            {...formik.getFieldProps('name')}
+
+                        />
+                        {formik.touched.name && formik.errors.name ? (
+                            <div style={{color: 'red'}}>{formik.errors.name}</div>
+                        ) : null}
+                        <input
+                            className={s.email}
+                            type="email"
+                            placeholder={'YOUR EMAIL'}
+                            {...formik.getFieldProps('email')}
+                        />
+                        {formik.touched.email && formik.errors.email ? (
+                            <div style={{color: 'red'}}>{formik.errors.email}</div>
+                        ) : null}
+
                     </p>
-                    <p className={s.inputSubjectWrapper}>
-                        <input className={s.subject} type="text" placeholder={'YOUR SUBJECT'}/>
-                    </p>
+                    {/*<p className={s.inputSubjectWrapper}>*/}
+                    {/*    <input className={s.subject} type="text" placeholder={'YOUR SUBJECT'}/>*/}
+                    {/*</p>*/}
                     <p className={s.inputTextAreaWrapper}>
-                        <textarea className={s.textarea} placeholder={'YOUR MESSAGE'}/>
+                        <textarea
+                            className={s.textarea}
+                            placeholder={'YOUR MESSAGE'}
+                            {...formik.getFieldProps('message')}
+                        />
+
                     </p>
+                    {formik.touched.message && formik.errors.message ? (
+                        <div style={{color: 'red'}}>{formik.errors.message}</div>
+                    ) : null}
                     <button className={s.sendBtn} >
                         <span className={s.sendBtnTxt}>send message</span>
                         <span className={s.sendBtnImg}>

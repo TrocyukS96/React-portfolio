@@ -5,6 +5,7 @@ import myView from './../../assets/images/about/myview.jpg';
 import somePhoto from './../../assets/images/about/otherPhoto.jpg';
 import {SuperLink} from "../../components/superLink/SuperLink";
 
+
 export const AboutMe = ()=> {
     return (
         <div className={s.aboutMe} id={'Home'}>
