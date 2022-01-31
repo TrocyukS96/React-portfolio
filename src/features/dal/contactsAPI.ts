@@ -1,4 +1,4 @@
-import axios, {AxiosResponse} from 'axios';
+import axios from 'axios';
 
 export const instance = axios.create({
     withCredentials: true,
@@ -8,6 +8,6 @@ export const instance = axios.create({
 
 export const contactsApi = {
     sendFeedBack(contactsData:any){
-        return instance.post('sendMessage',contactsData).then(res => res.data)
+        return axios.post('http://localhost:3010/sendMessage',contactsData)
     }
 }

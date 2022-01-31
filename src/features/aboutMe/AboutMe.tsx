@@ -1,10 +1,7 @@
 import React from 'react';
 import s from './AboutMe.module.scss';
 import {Title} from "../../components/title/Title";
-import myView from './../../assets/images/about/myview.jpg';
 import somePhoto from './../../assets/images/about/otherPhoto.jpg';
-import {SuperLink} from "../../components/superLink/SuperLink";
-
 
 export const AboutMe = ()=> {
     return (

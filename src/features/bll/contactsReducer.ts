@@ -26,12 +26,22 @@ export const setAppStatusAC = (status: RequestStatusType) => ({type: 'APP/SET-ST
 export const sendMessage = (contactsData:any) => async (dispatch: Dispatch<AppActionsType>) => {
     dispatch(setAppStatusAC('loading'))
     try {
-        const res = await contactsApi.sendFeedBack(contactsData)
+await contactsApi.sendFeedBack(contactsData)
+
         dispatch(setAppStatusAC('succeeded'))
     } catch (e) {
         console.log(e)
     }
 }
+// export const sendMessage = () => async (dispatch: Dispatch<AppActionsType>) => {
+//     dispatch(setAppStatusAC('loading'))
+//     try {
+//         const res = await contactsApi.sendFeedBack()
+//         dispatch(setAppStatusAC('succeeded'))
+//     } catch (e) {
+//         console.log(e)
+//     }
+// }
 
 //type
 export type RequestStatusType = 'idle' | 'loading' | 'succeeded' | 'failed'

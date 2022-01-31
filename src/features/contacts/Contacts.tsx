@@ -9,11 +9,14 @@ import s from './Contacts.module.scss';
 import {useFormik} from "formik";
 import {useDispatch} from "react-redux";
 import {sendMessage} from "../bll/contactsReducer";
+import axios from "axios";
+import {contactsApi} from "../dal/contactsAPI";
 
 //types
 type FormikErrorType = {
     email?: string
     name?: string
+    subject?: string
     message?: string
 }
 
@@ -23,6 +26,7 @@ export const Contacts = () => {
             initialValues: {
                 email: '',
                 name: '',
+                subject:'',
                 message: ''
             },
             validate: (values) => {
@@ -40,10 +44,37 @@ export const Contacts = () => {
                 return errors;
             },
             onSubmit: values => {
-                dispatch(sendMessage(values))
-                console.log(values)
-                formik.resetForm()
+                // dispatch(sendMessage({
+                //     name:values.name,
+                //     contacts:values.email,
+                //     message:values.message
+                // }))
+                // contactsApi.sendFeedBack({
+                //         name:values.name,
+                //         contacts:values.email,
+                //         message:values.message
+                //     }).then(()=>{
+                //     alert('your message has been sent')
+                // })
+                axios.post('https://nodejs-gmail.herokuapp.com/sendMessage', {
+                            name:values.name,
+                            mail:values.email,
+                            subject:values.subject,
+                            message:values.message
+                        }).then(()=>{
+                    alert('the message have been sent')
+                })
+                // dispatch(sendMessage({
+                //                 name:values.name,
+                //                 mail:values.email,
+                //                 subject:values.subject,
+                //                 message:values.message
+                //             }))
+                // formik.resetForm()
+                // alert('ok')
+
             },
+
         })
 
     return (
@@ -95,9 +126,17 @@ export const Contacts = () => {
                         ) : null}
 
                     </p>
-                    {/*<p className={s.inputSubjectWrapper}>*/}
-                    {/*    <input className={s.subject} type="text" placeholder={'YOUR SUBJECT'}/>*/}
-                    {/*</p>*/}
+                    <p className={s.inputSubjectWrapper}>
+                        <input
+                            className={s.subject}
+                            type="text"
+                            placeholder={'YOUR SUBJECT'}
+                            {...formik.getFieldProps('subject')}
+                        />
+                    </p>
+                    {formik.touched.subject && formik.errors.subject ? (
+                        <div style={{color: 'red'}}>{formik.errors.subject}</div>
+                    ) : null}
                     <p className={s.inputTextAreaWrapper}>
                         <textarea
                             className={s.textarea}
