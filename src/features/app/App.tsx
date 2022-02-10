@@ -33,7 +33,7 @@ export const App = () => {
                     options={{
                         background: {
                             color: {
-                                value: "#0d47a1",
+                                value: "rgba(12,11,11,0.42)",
                             },
 
                         },

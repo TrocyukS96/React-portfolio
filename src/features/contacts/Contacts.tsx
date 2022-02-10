@@ -8,9 +8,7 @@ import sendIcon from './../../assets/images/contacts/send-icon.png';
 import s from './Contacts.module.scss';
 import {useFormik} from "formik";
 import {useDispatch} from "react-redux";
-import {sendMessage} from "../bll/contactsReducer";
 import axios from "axios";
-import {contactsApi} from "../dal/contactsAPI";
 
 //types
 type FormikErrorType = {

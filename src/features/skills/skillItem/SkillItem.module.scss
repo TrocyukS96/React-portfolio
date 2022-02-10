@@ -2,14 +2,14 @@
 @import './../../../assets/abstracts/vars';
 
 
-.skillItem{
+.skillItem {
   width: 450px;
 
   padding: 15px 0 20px;
 
   @include flex-edit(center, center, column);
 
-  border:2px solid white;
+  border: 2px solid white;
 
   position: relative;
 
@@ -31,8 +31,8 @@
     width: 270px;
   }
 
-  &::before{
-    content:'';
+  &::before {
+    content: '';
 
     position: absolute;
     left: 0;
@@ -47,21 +47,23 @@
 
     transition: .3s ease-in-out;
 
-    @media screen and (max-width: 760px){
+    @media screen and (max-width: 760px) {
       opacity: 0;
     }
   }
+
   //&:hover::before{
   //  opacity: 0;
   //}
 
-  .title{
+  .title {
     margin: 0 0 25px 0;
 
-    @include text-edit(SF UI Display, 500, 3.25rem, 70px );
-    color:$textColor;
+    @include text-edit(SF UI Display, 500, 3.25rem, 70px);
+    color: $textColor;
   }
-  .iconImg{
+
+  .iconImg {
     width: 65px;
     height: 65px;
 
@@ -71,12 +73,33 @@
 
     object-fit: cover;
   }
-  .text{
+
+  .text {
     margin: 30px 0 0;
 
     max-width: 330px;
 
-    @include text-edit(SF UI Display, 500, 1.25rem, 30px );
-    color:$textColor;
+    @include text-edit(SF UI Display, 500, 1.25rem, 30px);
+    color: $textColor;
   }
+}
+
+
+.CircularProgressbar {
+  .CircularProgressbar .CircularProgressbar-text {
+    fill: #ffb800;
+    font-size: 20px;
+    dominant-baseline: middle;
+    text-anchor: middle;
+  }
+
+  .CircularProgressbar .CircularProgressbar-path {
+    stroke: #ff9800;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease 0s;
+  }
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
+  fill: #ffb800;
 }

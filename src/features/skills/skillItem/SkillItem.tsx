@@ -2,6 +2,8 @@ import s from './SkillItem.module.scss';
 import 'react-circular-progressbar/dist/styles.css';
 import {CircularProgressbar} from "react-circular-progressbar";
 import { ProgressProvider } from './ProgressProvider';
+import VisibilitySensor from "react-visibility-sensor";
+
 
 type SkillItemPropsType = {
     title?: string
@@ -11,7 +13,7 @@ type SkillItemPropsType = {
 
 }
 const bstyles = {
-    backgroundColor: "#3e98c7",
+    fill: "#ffb800",
     textColor: "#fff",
     pathColor: "#fff",
     trailColor: "transparent"
@@ -35,10 +37,40 @@ export const SkillItem = (props: SkillItemPropsType) => {
 
                 {/*/>*/}
 
-                <ProgressProvider valueStart={0} valueEnd={props.percentage}>
-                    {(value:number) => <CircularProgressbar value={value}/>}
-                </ProgressProvider>
+                {/*<ProgressProvider valueStart={0} valueEnd={props.percentage}>*/}
+                {/*    {(value:number) => <CircularProgressbar value={value}/>}*/}
+                {/*</ProgressProvider>*/}
+                <VisibilitySensor>
+                    {({ isVisible }) => {
+                        const percentage = isVisible ? props.percentage : 0;
 
+
+                        return (
+                            <CircularProgressbar
+                                value={percentage}
+                                text={`${percentage}%`}
+                                // @ts-ignore
+                                styles={{
+                                    path: {
+                                        // transform: "rotate(180deg)",
+                                        transformOrigin: "center center",
+                                        strokeLinecap: "butt",
+                                        stroke: percentage >= 70 ? "#ffb800" : '#fff'
+                                    },
+                                    trail: {
+                                        strokeWidth: 0
+                                    },
+                                    text: {
+                                        fontSize: 22,
+                                        fontWeight: 800,
+                                        animation: "fadein 2s",
+                                        fill: percentage >= 80 ? "rgba(255,0,0,0.49)" : '#fff'
+                                    }
+                                }}
+                            />
+                        );
+                    }}
+                    </VisibilitySensor>
             </div>
             <p className={s.text}>{props.text ? props.text : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quod?'}</p>
 
