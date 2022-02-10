@@ -26,7 +26,7 @@ export const Navigation = (props:NavigationPropsType)=> {
             <ul className={props.active ? s.mobileList + " " + s.active : s.mobileList}>
                 {navData.map((l,i)=>{
                     return(
-                    <a className={s.mobileLink} href={'#'+l} key={i} >
+                    <a className={s.mobileLink} href={'#'+l} key={i} onClick={onClickCancelClass}>
                         <li className={s.mobileItem}>
                             <span>{l}</span>
                         </li>

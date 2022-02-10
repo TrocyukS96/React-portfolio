@@ -187,69 +187,36 @@
         }
       }
 
-      .sendBtn {
-        margin-bottom: 10px;
-
-        display: inline-block;
-
-        @include text-edit(Poppins, 400, 1.0rem, 1.4);
-
-        overflow: hidden;
-
-        border-radius: 35px;
-
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        text-align: center;
-        cursor: pointer;
-        vertical-align: middle;
-        transition: all .25s ease-in-out;
-        text-transform: uppercase;
-        text-decoration: none !important;
+      .disableBtn{
         position: relative;
-        z-index: 1;
-        padding: 16px 70px 16px 35px;
-        font-size: 15px;
-        font-weight: 600;
-        color: #fff;
-        background-color: transparent;
-        outline: none !important;
-        border: 1px solid $lightThemeColor;
+        color: #ff9800;
+        background-color: gray;
+        width: 150px;
+        height: 50px;
+        border-radius: 12px;
 
-        &:active {
-          border: 1px solid $onActiveColor;
-        }
-
-        .sendBtnImg {
-          position: absolute;
-          right: -1px;
-          top: -1px;
-          bottom: 0;
-          width: 55px;
-          height: 55px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 19px;
-          color: #fff;
-          border-radius: 50%;
-          background-color: $lightThemeColor;
-          transition: .3s ease;
+        font-size: 18px;
+      }
+      .sendBtn{
+        position: relative;
+        color: #ffffff;
+        background-color: #ffb800;
+        width: 150px;
+        height: 50px;
+        border-radius: 12px;
 
 
-          img {
-            width: 100px;
-            height: 100px;
-          }
-        }
+        font-weight: 500;
+        font-size: 18px;
 
-        &:active {
-          .sendBtnImg {
-            background-color: $onActiveColor;
-          }
+        transition: all .3s ease;
 
+        &:active{
+          background-color: rgba(255, 184, 0, 0.41);
         }
       }
+
+
       .subject, .textarea{
         @media screen and (max-width: 1000px) {
           min-width: 100%;
@@ -259,4 +226,44 @@
   }
 
 
+}
+.cartModal{
+  width: 600px;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background-color: rgba(255, 184, 0, 0.41);
+
+  color:#fff;
+  font-size: 22px;
+
+  .cartModalBtn{
+
+    position: absolute;
+    right: 5px;
+    top: 0;
+
+    border-style: none;
+    background-color: transparent;
+
+    font-weight: 500;
+    font-size: 30px;
+    color:red;
+  }
+}
+.errors{
+  text-align: center;
+  margin-top: -10px;
+  color:red;
+
+  text-transform: uppercase;
 }

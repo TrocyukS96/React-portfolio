@@ -64,7 +64,7 @@ export const SkillItem = (props: SkillItemPropsType) => {
                                         fontSize: 22,
                                         fontWeight: 800,
                                         animation: "fadein 2s",
-                                        fill: percentage >= 80 ? "rgba(255,0,0,0.49)" : '#fff'
+                                        fill: percentage >= 70 ? "rgb(255,184,0)" : '#fff'
                                     }
                                 }}
                             />

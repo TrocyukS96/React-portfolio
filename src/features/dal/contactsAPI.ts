@@ -8,6 +8,6 @@ export const instance = axios.create({
 
 export const contactsApi = {
     sendFeedBack(contactsData:any){
-        return axios.post('http://localhost:3010/sendMessage',contactsData)
+        return axios.post('https://radiant-tundra-75553.herokuapp.com/sendMessage',contactsData)
     }
 }

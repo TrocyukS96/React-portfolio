@@ -3,7 +3,7 @@ import {contactsApi} from "../dal/contactsAPI";
 
 
 const initialState = {
-    status:'loading',
+    status: 'loading',
     error: null as string | null,
 }
 
@@ -23,15 +23,13 @@ export const setAppStatusAC = (status: RequestStatusType) => ({type: 'APP/SET-ST
 
 
 //thunks
-export const sendMessage = (contactsData:any) => async (dispatch: Dispatch<AppActionsType>) => {
+export const sendMessage = (contactsData: any) => async (dispatch: Dispatch<AppActionsType>) => {
     dispatch(setAppStatusAC('loading'))
-    try {
-await contactsApi.sendFeedBack(contactsData)
 
-        dispatch(setAppStatusAC('succeeded'))
-    } catch (e) {
-        console.log(e)
-    }
+    await contactsApi.sendFeedBack(contactsData)
+
+    dispatch(setAppStatusAC('succeeded'))
+
 }
 // export const sendMessage = () => async (dispatch: Dispatch<AppActionsType>) => {
 //     dispatch(setAppStatusAC('loading'))

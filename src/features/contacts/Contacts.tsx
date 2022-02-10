@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Title} from "../../components/title/Title";
 import {ContactsListItem} from "./contactslistItem/ContactsListItem";
 import addressIcon from './../../assets/images/contacts/adress-icon.png';
@@ -9,6 +9,8 @@ import s from './Contacts.module.scss';
 import {useFormik} from "formik";
 import {useDispatch} from "react-redux";
 import axios from "axios";
+import {Box, Button, Modal, Typography} from "@mui/material";
+import {sendMessage} from "../bll/contactsReducer";
 
 //types
 type FormikErrorType = {
@@ -19,61 +21,49 @@ type FormikErrorType = {
 }
 
 export const Contacts = () => {
-        const dispatch = useDispatch()
-        const formik = useFormik({
-            initialValues: {
-                email: '',
-                name: '',
-                subject:'',
-                message: ''
-            },
-            validate: (values) => {
-                const errors: FormikErrorType = {};
-                if (!values.email) {
-                    errors.email = 'Required';
-                } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-                    errors.email = 'Invalid email address';
-                }
-                // if (!values.password) {
-                //     errors.password = 'Required';
-                // } else if (values.password.length <= 3 || values.password.length > 20) {
-                //     errors.password = 'password should consist from 3 to 20 symbols'
-                // }
-                return errors;
-            },
-            onSubmit: values => {
-                // dispatch(sendMessage({
-                //     name:values.name,
-                //     contacts:values.email,
-                //     message:values.message
-                // }))
-                // contactsApi.sendFeedBack({
-                //         name:values.name,
-                //         contacts:values.email,
-                //         message:values.message
-                //     }).then(()=>{
-                //     alert('your message has been sent')
-                // })
-                axios.post('https://nodejs-gmail.herokuapp.com/sendMessage', {
-                            name:values.name,
-                            mail:values.email,
-                            subject:values.subject,
-                            message:values.message
-                        }).then(()=>{
-                    alert('the message have been sent')
-                })
-                // dispatch(sendMessage({
-                //                 name:values.name,
-                //                 mail:values.email,
-                //                 subject:values.subject,
-                //                 message:values.message
-                //             }))
-                // formik.resetForm()
-                // alert('ok')
+    //hooks
+    const dispatch = useDispatch()
+    const [disable, setDisable] = useState(false)
+    const [open, setOpen] = useState(false);
+    const handleClose = () => setOpen(false);
 
-            },
+    const formik = useFormik({
+        initialValues: {
+            email: '',
+            name: '',
+            subject: '',
+            message: ''
+        },
+        validate: (values) => {
+            const errors: FormikErrorType = {};
+            if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+                errors.email = 'Invalid email address';
+                setDisable(true)
+            } else setDisable(false)
+            if (!values.name && !values.subject && !values.message && !values.email) {
+                errors.name = 'Please, fill in all the fields!';
+                errors.subject = 'Please, fill in all the fields!';
+                errors.message = 'Please, fill in all the fields!';
+                errors.email = 'Please, fill in all the fields!';
 
-        })
+                setDisable(true)
+            } else setDisable(false)
+            return errors;
+        },
+        onSubmit: values => {
+            dispatch(sendMessage({
+                name: values.name,
+                mail: values.email,
+                subject: values.subject,
+                message: values.message
+            }))
+            formik.resetForm()
+            setTimeout(() => {
+                setOpen(true)
+            }, 2000)
+        },
+
+    })
 
     return (
         <div className={s.contacts} id={'Contacts'}>
@@ -110,18 +100,15 @@ export const Contacts = () => {
                             {...formik.getFieldProps('name')}
 
                         />
-                        {formik.touched.name && formik.errors.name ? (
-                            <div style={{color: 'red'}}>{formik.errors.name}</div>
-                        ) : null}
                         <input
                             className={s.email}
                             type="email"
                             placeholder={'YOUR EMAIL'}
                             {...formik.getFieldProps('email')}
                         />
-                        {formik.touched.email && formik.errors.email ? (
-                            <div style={{color: 'red'}}>{formik.errors.email}</div>
-                        ) : null}
+                        {/*{formik.touched.email && formik.errors.email ? (*/}
+                        {/*    <div style={{color: 'red'}}>{formik.errors.email}</div>*/}
+                        {/*) : null}*/}
 
                     </p>
                     <p className={s.inputSubjectWrapper}>
@@ -132,9 +119,6 @@ export const Contacts = () => {
                             {...formik.getFieldProps('subject')}
                         />
                     </p>
-                    {formik.touched.subject && formik.errors.subject ? (
-                        <div style={{color: 'red'}}>{formik.errors.subject}</div>
-                    ) : null}
                     <p className={s.inputTextAreaWrapper}>
                         <textarea
                             className={s.textarea}
@@ -143,16 +127,27 @@ export const Contacts = () => {
                         />
 
                     </p>
-                    {formik.touched.message && formik.errors.message ? (
-                        <div style={{color: 'red'}}>{formik.errors.message}</div>
-                    ) : null}
-                    <button className={s.sendBtn} >
-                        <span className={s.sendBtnTxt}>send message</span>
-                        <span className={s.sendBtnImg}>
-                            <img src={sendIcon} alt=""/>
-                        </span>
-                    </button>
+                    <p className={s.errors}>{formik.touched.message && formik.errors.message }</p>
+                    <Button
+                        variant={'contained'}
+                        disabled={disable}
+                        className={disable ? s.disableBtn : s.sendBtn}
+                        type='submit'
+                    >Send</Button>
                 </form>
+                <Modal
+                    open={open} onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description">
+
+                    <Box className={s.cartModal}>
+                        {/*//@ts-ignore*/}
+                        <Typography id="modal-modal-description" sx={{mt: 2}} className={s.cartModalText}>
+                            Thanks for attention. I will try to answer as soon as possible!
+                        </Typography>
+                        <button onClick={handleClose} className={s.cartModalBtn}>x</button>
+                    </Box>
+                </Modal>
             </div>
         </div>
     );
