@@ -17,7 +17,6 @@
 
     background: black;
 
-
     @media screen and (max-width: 1180px) {
       padding: 10px;
 
@@ -195,10 +194,10 @@
     }
 
     .view {
+      position: relative;
 
-
-      background-color: $lightThemeColor;
-
+      //background-color: $lightThemeColor;
+      background-color: transparent;
       padding-top: 5px;
 
       text-align: center;

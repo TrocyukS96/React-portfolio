@@ -2,8 +2,19 @@ import React from 'react';
 import s from './AboutMe.module.scss';
 import {Title} from "../../components/title/Title";
 import somePhoto from './../../assets/images/about/otherPhoto.jpg';
+import FileSaver from "file-saver";
 
-export const AboutMe = ()=> {
+
+const saveFile = () => {
+    FileSaver.saveAs(
+        process.env.REACT_APP_CLIENT_URL + "cv.pdf",
+        "MyCV.pdf"
+    );
+}
+export const AboutMe = () => {
+    const saveCV =()=>{
+        FileSaver.saveAs('CV', 'cv.pdx')
+    }
     return (
         <div className={s.aboutMe} id={'Home'}>
             <div className={s.wrapper}>
@@ -13,8 +24,7 @@ export const AboutMe = ()=> {
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, laboriosam!
                     </p>
 
-                    <a href="./../../assets/download/Stanislav_Trocyuk_-_Front-end_developer.pdf" download className={s.link}> Download CV</a>
-                    {/*<SuperLink text={'Download CVfff'} />*/}
+                    <a download href="https://drive.google.com/file/d/1-8YM96g-CvKUdl2KmstQ8Z5zz25VhGH5/view?usp=sharing" className={s.link} target="_blank" > Download CV</a>
                 </div>
                 <div className={s.view}>
                     <img src={somePhoto} alt="person-view"/>
@@ -24,3 +34,4 @@ export const AboutMe = ()=> {
         </ div>
     );
 }
+

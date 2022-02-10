@@ -32,9 +32,9 @@ export const App = () => {
                     loaded={particlesLoaded}
                     options={{
                         background: {
-                            // color: {
-                            //     value: "#0d47a1",
-                            // },
+                            color: {
+                                value: "#0d47a1",
+                            },
 
                         },
 
