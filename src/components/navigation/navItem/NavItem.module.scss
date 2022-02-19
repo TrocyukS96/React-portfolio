@@ -127,12 +127,13 @@
 
     transition: all .2s ease-out 0.2s;
 
-    color: $textColor;
+    color:#000;
 
   }
 
   &:hover .navItem {
     background-color: $lightThemeColor;
+    color:#000;
   }
   //&:active .navItem  {
   //  background-color: $onActiveColor;
