@@ -11,9 +11,6 @@ import newProvidenceProjImg from './../../assets/images/myProjects/newProvidence
 import archMoveProjImg from './../../assets/images/myProjects/archMoveProjImg.png';
 import driveMotoProjImg from './../../assets/images/myProjects/driveMotoProjImg.png';
 
-
-// let projectImages =
-    // [funnyImage, funnyImage,funnyImage, funnyImage, funnyImage, funnyImage, funnyImage]
     let projectImages = [
         {img:driveMotoProjImg, link:'https://trocyuks96.github.io/react-project/'},
         {img:archMoveProjImg, link:'https://trocyuks96.github.io/arch-project/'},
