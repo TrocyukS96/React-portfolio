@@ -1,7 +1,6 @@
 import React from "react";
 import s from "./Projects.module.scss";
 import {Title} from "../../components/title/Title";
-import funnyImage from '../../assets/images/temporaryImages/funnyMonkey.jpg';
 import {ProjectCard} from "./projectCard/ProjectCard";
 import aeroUnionImg from './../../assets/images/myProjects/auroUnionProj.png';
 import planYourLifeImg from './../../assets/images/myProjects/planYourLifeProj.png';
@@ -10,15 +9,22 @@ import thriveProjImg from './../../assets/images/myProjects/thriveProgImg.png';
 import newProvidenceProjImg from './../../assets/images/myProjects/newProvidenceProjImg.png';
 import archMoveProjImg from './../../assets/images/myProjects/archMoveProjImg.png';
 import driveMotoProjImg from './../../assets/images/myProjects/driveMotoProjImg.png';
+import nedvexImg from './../../assets/images/myProjects/nedvex.png';
+import learnCards from './../../assets/images/myProjects/learnCards.png';
+import socialMedia from './../../assets/images/myProjects/socialMedia.png';
+
 
     let projectImages = [
-        {img:driveMotoProjImg, link:'https://trocyuks96.github.io/react-project/'},
-        {img:archMoveProjImg, link:'https://trocyuks96.github.io/arch-project/'},
-        {img:newProvidenceProjImg, link:'https://trocyuks96.github.io/NewProvidence/'},
-        {img:thriveProjImg, link:'https://trocyuks96.github.io/ThriveTalks-project/'},
-        {img:smoothyProjImg, link:'https://trocyuks96.github.io/Smoothie-project/'},
-        {img:aeroUnionImg, link:'https://trocyuks96.github.io/aurounion-project/'},
-        {img:planYourLifeImg, link:'https://trocyuks96.github.io/plan-your-life/'},
+        {img:nedvexImg, link:'http://212.41.17.20:8080/main',phoneTitle:'Internet shop'},
+        {img:learnCards, link:'https://trocyuks96.github.io/learnCards-app/#/profile',phoneTitle:'Learn cards project'},
+        {img:socialMedia, link:'https://trocyuks96.github.io/socialMedia/#/profile',phoneTitle:'Social media project'},
+        {img:driveMotoProjImg, link:'https://trocyuks96.github.io/react-project/',phoneTitle: 'Drive moto learning project'},
+        {img:archMoveProjImg, link:'https://trocyuks96.github.io/arch-project/',phoneTitle: 'ArchMove learning project'},
+        {img:newProvidenceProjImg, link:'https://trocyuks96.github.io/NewProvidence/',phoneTitle: 'New Providence learning project'},
+        // {img:thriveProjImg, link:'https://trocyuks96.github.io/ThriveTalks-project/'},
+        // {img:smoothyProjImg, link:'https://trocyuks96.github.io/Smoothie-project/'},
+        // {img:aeroUnionImg, link:'https://trocyuks96.github.io/aurounion-project/'},
+        // {img:planYourLifeImg, link:'https://trocyuks96.github.io/plan-your-life/'},
     ]
 export const Projects = () => {
 
@@ -29,7 +35,7 @@ export const Projects = () => {
                 <div className={s.cardsInner}>
                     {projectImages.map((p, i)=>{
                         return(
-                            <ProjectCard key={i} cardImage={p.img} link={p.link}/>
+                            <ProjectCard key={i} cardImage={p.img} link={p.link} phoneTitle={p.phoneTitle}/>
                         )
                     })}
                 </div>

@@ -14,16 +14,21 @@ import svgIcon from '../../assets/images/skills/svg-icon.png';
 import gitIcon from '../../assets/images/skills/git_icon.png';
 
 const skillsData = [
-    {title:'React',icon: reactIcon, percentage:85},
-    {title:'Redux',icon: reduxIcon, percentage:82},
     {title:'Js',icon: javascriptIcon, percentage:70},
+    {title:'Typescript',icon: reactIcon, percentage:80},
+    {title:'ReactJS',icon: reactIcon, percentage:85},
+    {title:'NextJS',icon: reactIcon, percentage:85},
+    {title:'Redux',icon: reduxIcon, percentage:82},
+    {title:'MobX',icon: reduxIcon, percentage:70},
+    {title:'Docker',icon: reduxIcon, percentage:70},
     {title:'StoryBook',icon: storybookIcon, percentage:87},
     {title:'Formik',icon: formikIcon, percentage:88},
     {title:'HTML',icon: htmlIcon, percentage:75},
+    {title:'GIT',icon: gitIcon, percentage:70},
     {title:'CSS',icon: cssIcon, percentage:82},
     {title:'SCSS',icon: scssIcon, percentage:85},
     {title:'SVG',icon: svgIcon, percentage:70},
-    {title:'GIT',icon: gitIcon, percentage:70},
+    {title:'English',icon: svgIcon, percentage:75},
 ]
 //types
 type SkillDataType = {title:string, icon:any, percentage:number }
