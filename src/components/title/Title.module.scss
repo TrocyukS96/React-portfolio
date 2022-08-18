@@ -11,7 +11,9 @@
 
   text-transform: uppercase;
 
-  color:$textColor;
+  background: $goldGradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   @media screen and (max-width: 1380px) {
     font-size: 4rem;
