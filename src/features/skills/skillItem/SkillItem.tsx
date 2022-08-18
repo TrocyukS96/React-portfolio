@@ -72,7 +72,7 @@ export const SkillItem = (props: SkillItemPropsType) => {
                     }}
                     </VisibilitySensor>
             </div>
-            <p className={s.text}>{props.text ? props.text : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quod?'}</p>
+            <p className={s.text}>{props.text ? props.text : ''}</p>
 
         </div>
     );
