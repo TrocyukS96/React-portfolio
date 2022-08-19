@@ -55,7 +55,7 @@ export const SkillItem = (props: SkillItemPropsType) => {
                                         // transform: "rotate(180deg)",
                                         transformOrigin: "center center",
                                         strokeLinecap: "butt",
-                                        stroke: percentage >= 70 ? "#ffb800" : '#fff'
+                                        stroke: '#fff'
                                     },
                                     trail: {
                                         strokeWidth: 0

@@ -1,7 +1,5 @@
 import React from "react";
 import s from "./ProjectCard.module.scss";
-import {SuperLink} from "../../../components/superLink/SuperLink";
-import {Title} from "../../../components/title/Title";
 
 type ProjectCardPropsType = {
     cardImage:any
