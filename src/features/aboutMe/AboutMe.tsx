@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './AboutMe.module.scss';
 import {Title} from "../../components/title/Title";
-import myPhoto from './../../assets/images/myPhoto.jpg';
+import myPhoto from './../../assets/images/myPhoto.jpeg';
 import codeWarsImg from './../../assets/images/about/codeWars.png';
 import gitHubImg from './../../assets/images/about/gitHub.png';
 
