@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/React-portfolio/static/css/main.915d7b4d.chunk.css",
-    "main.js": "/React-portfolio/static/js/main.e91d7b55.chunk.js",
-    "main.js.map": "/React-portfolio/static/js/main.e91d7b55.chunk.js.map",
+    "main.css": "/React-portfolio/static/css/main.1ed4b025.chunk.css",
+    "main.js": "/React-portfolio/static/js/main.2ab48a35.chunk.js",
+    "main.js.map": "/React-portfolio/static/js/main.2ab48a35.chunk.js.map",
     "runtime-main.js": "/React-portfolio/static/js/runtime-main.f2cd9937.js",
     "runtime-main.js.map": "/React-portfolio/static/js/runtime-main.f2cd9937.js.map",
     "static/css/2.6c0f60ba.chunk.css": "/React-portfolio/static/css/2.6c0f60ba.chunk.css",
@@ -14,7 +14,7 @@
     "static/js/4.c5ce2fd7.chunk.js.map": "/React-portfolio/static/js/4.c5ce2fd7.chunk.js.map",
     "index.html": "/React-portfolio/index.html",
     "static/css/2.6c0f60ba.chunk.css.map": "/React-portfolio/static/css/2.6c0f60ba.chunk.css.map",
-    "static/css/main.915d7b4d.chunk.css.map": "/React-portfolio/static/css/main.915d7b4d.chunk.css.map",
+    "static/css/main.1ed4b025.chunk.css.map": "/React-portfolio/static/css/main.1ed4b025.chunk.css.map",
     "static/js/2.4903f197.chunk.js.LICENSE.txt": "/React-portfolio/static/js/2.4903f197.chunk.js.LICENSE.txt",
     "static/media/archMoveProjImg.472b0c8e.png": "/React-portfolio/static/media/archMoveProjImg.472b0c8e.png",
     "static/media/banticom.9475ab90.png": "/React-portfolio/static/media/banticom.9475ab90.png",
@@ -25,7 +25,7 @@
     "static/media/git_icon.396a5b09.png": "/React-portfolio/static/media/git_icon.396a5b09.png",
     "static/media/html_icon.397540de.png": "/React-portfolio/static/media/html_icon.397540de.png",
     "static/media/learnCards.f847c06a.png": "/React-portfolio/static/media/learnCards.f847c06a.png",
-    "static/media/myPhoto.a7050299.jpg": "/React-portfolio/static/media/myPhoto.a7050299.jpg",
+    "static/media/myPhoto.bef10eb8.jpeg": "/React-portfolio/static/media/myPhoto.bef10eb8.jpeg",
     "static/media/newProvidenceProjImg.cac76270.png": "/React-portfolio/static/media/newProvidenceProjImg.cac76270.png",
     "static/media/person-icon.989815e3.png": "/React-portfolio/static/media/person-icon.989815e3.png",
     "static/media/react-icon.598c2743.png": "/React-portfolio/static/media/react-icon.598c2743.png",
@@ -39,7 +39,7 @@
     "static/js/runtime-main.f2cd9937.js",
     "static/css/2.6c0f60ba.chunk.css",
     "static/js/2.4903f197.chunk.js",
-    "static/css/main.915d7b4d.chunk.css",
-    "static/js/main.e91d7b55.chunk.js"
+    "static/css/main.1ed4b025.chunk.css",
+    "static/js/main.2ab48a35.chunk.js"
   ]
 }
