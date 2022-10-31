@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/React-portfolio/static/css/main.9ac9eb02.chunk.css",
-    "main.js": "/React-portfolio/static/js/main.9fc68df0.chunk.js",
-    "main.js.map": "/React-portfolio/static/js/main.9fc68df0.chunk.js.map",
+    "main.css": "/React-portfolio/static/css/main.915d7b4d.chunk.css",
+    "main.js": "/React-portfolio/static/js/main.9af65b7b.chunk.js",
+    "main.js.map": "/React-portfolio/static/js/main.9af65b7b.chunk.js.map",
     "runtime-main.js": "/React-portfolio/static/js/runtime-main.f2cd9937.js",
     "runtime-main.js.map": "/React-portfolio/static/js/runtime-main.f2cd9937.js.map",
     "static/css/2.6c0f60ba.chunk.css": "/React-portfolio/static/css/2.6c0f60ba.chunk.css",
@@ -14,18 +14,18 @@
     "static/js/4.c5ce2fd7.chunk.js.map": "/React-portfolio/static/js/4.c5ce2fd7.chunk.js.map",
     "index.html": "/React-portfolio/index.html",
     "static/css/2.6c0f60ba.chunk.css.map": "/React-portfolio/static/css/2.6c0f60ba.chunk.css.map",
-    "static/css/main.9ac9eb02.chunk.css.map": "/React-portfolio/static/css/main.9ac9eb02.chunk.css.map",
+    "static/css/main.915d7b4d.chunk.css.map": "/React-portfolio/static/css/main.915d7b4d.chunk.css.map",
     "static/js/2.4903f197.chunk.js.LICENSE.txt": "/React-portfolio/static/js/2.4903f197.chunk.js.LICENSE.txt",
     "static/media/archMoveProjImg.472b0c8e.png": "/React-portfolio/static/media/archMoveProjImg.472b0c8e.png",
+    "static/media/banticom.9475ab90.png": "/React-portfolio/static/media/banticom.9475ab90.png",
     "static/media/SkillItem.module.scss": "/React-portfolio/static/media/codingBG.cc7cc028.jpg",
+    "static/media/crm.125312dd.png": "/React-portfolio/static/media/crm.125312dd.png",
     "static/media/css-icon.5491a3b0.png": "/React-portfolio/static/media/css-icon.5491a3b0.png",
-    "static/media/driveMotoProjImg.090d591b.png": "/React-portfolio/static/media/driveMotoProjImg.090d591b.png",
     "static/media/formik-icon.1d2c091c.jpg": "/React-portfolio/static/media/formik-icon.1d2c091c.jpg",
     "static/media/git_icon.396a5b09.png": "/React-portfolio/static/media/git_icon.396a5b09.png",
     "static/media/html_icon.397540de.png": "/React-portfolio/static/media/html_icon.397540de.png",
     "static/media/learnCards.f847c06a.png": "/React-portfolio/static/media/learnCards.f847c06a.png",
     "static/media/myPhoto.a7050299.jpg": "/React-portfolio/static/media/myPhoto.a7050299.jpg",
-    "static/media/nedvex.6a8af809.png": "/React-portfolio/static/media/nedvex.6a8af809.png",
     "static/media/newProvidenceProjImg.cac76270.png": "/React-portfolio/static/media/newProvidenceProjImg.cac76270.png",
     "static/media/person-icon.989815e3.png": "/React-portfolio/static/media/person-icon.989815e3.png",
     "static/media/react-icon.598c2743.png": "/React-portfolio/static/media/react-icon.598c2743.png",
@@ -39,7 +39,7 @@
     "static/js/runtime-main.f2cd9937.js",
     "static/css/2.6c0f60ba.chunk.css",
     "static/js/2.4903f197.chunk.js",
-    "static/css/main.9ac9eb02.chunk.css",
-    "static/js/main.9fc68df0.chunk.js"
+    "static/css/main.915d7b4d.chunk.css",
+    "static/js/main.9af65b7b.chunk.js"
   ]
 }
