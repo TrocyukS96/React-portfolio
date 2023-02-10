@@ -4,9 +4,9 @@
 
 ## Contact Details
 
-* Email: [trotzuk.stanislav@gmail.com](mailto:josh@joshbeard.me)
-* GitHub: [github.com/TrocyukS96](https://github.com/joshbeard)
-* Location: [Minsk, Belarus](https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado)
+* Email: [trotzuk.stanislav@gmail.com](mailto:trotzuk.stanislav@gmail.com)
+* GitHub: [github.com/TrocyukS96](https://github.com/TrocyukS96)
+* Location: [Minsk, Belarus](https://en.wikipedia.org/wiki/Minsk)
 
 ## Summary
 
