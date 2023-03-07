@@ -14,25 +14,24 @@ import svgIcon from '../../assets/images/skills/svg-icon.png';
 import gitIcon from '../../assets/images/skills/git_icon.png';
 
 const skillsData = [
-    {title:'Js',icon: javascriptIcon, percentage:70},
+    {title:'Javascript',icon: javascriptIcon, percentage:80},
     {title:'Typescript',icon: reactIcon, percentage:80},
-    {title:'ReactJS',icon: reactIcon, percentage:85},
-    {title:'NextJS',icon: reactIcon, percentage:85},
+    {title:'React',icon: reactIcon, percentage:85},
+    {title:'Next',icon: reactIcon, percentage:85},
+    {title:'Nest',icon: reactIcon, percentage:60},
     {title:'Redux',icon: reduxIcon, percentage:82},
     {title:'MobX',icon: reduxIcon, percentage:70},
-    {title:'Docker',icon: reduxIcon, percentage:70},
     {title:'StoryBook',icon: storybookIcon, percentage:87},
     {title:'Formik',icon: formikIcon, percentage:88},
     {title:'HTML',icon: htmlIcon, percentage:75},
     {title:'GIT',icon: gitIcon, percentage:70},
     {title:'CSS',icon: cssIcon, percentage:82},
     {title:'SCSS',icon: scssIcon, percentage:85},
-    {title:'SVG',icon: svgIcon, percentage:70},
+    {title:'Material UI',icon: svgIcon, percentage:90},
+    {title:'Ant design',icon: svgIcon, percentage:90},
     {title:'English',icon: svgIcon, percentage:75},
 ]
 //types
-type SkillDataType = {title:string, icon:any, percentage:number }
-
 export const Skills = () => {
     return (
         <div className={s.skills} id={'Skills'}>

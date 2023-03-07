@@ -82,21 +82,18 @@
   .navItem {
     height: 50px;
     width: 50px;
+    margin-top: 20px;
 
     border-radius: 50%;
-
     background-color: $backgroundOnHoverColor;
-
     @include flex-edit(center, center, raw);
-
-    margin-top: 20px;
+    cursor: pointer;
 
     .navImg {
       width: 30px;
       height: 30px;
 
       object-fit: cover;
-
       position: relative;
       z-index: 1;
     }
@@ -107,15 +104,11 @@
       width: 40px;
 
       background-color: $lightThemeColor;
-
       border-radius: 0 30px 30px 0;
-
       position: absolute;
-
       opacity: 0;
 
       @include text-edit(SF UI Display, 500, 1.25rem, 45px);
-
       text-align: center;
     }
   }
@@ -126,18 +119,13 @@
     opacity: 1;
 
     transition: all .2s ease-out 0.2s;
-
     color:#000;
-
   }
 
   &:hover .navItem {
     background-color: $lightThemeColor;
     color:#000;
   }
-  //&:active .navItem  {
-  //  background-color: $onActiveColor;
-  //}
   &:active .navText  {
     background-color: $onActiveColor;
   }
