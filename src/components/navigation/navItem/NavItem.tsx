@@ -7,10 +7,12 @@ type NavItemPropsType = {
     navData:string
     isSvgIcon?:boolean
 
+    onClick:()=>void
+
 }
-export const NavItem:FC<NavItemPropsType> = ({text, icon, navData,isSvgIcon}) => {
+export const NavItem:FC<NavItemPropsType> = ({text, icon,isSvgIcon,onClick}) => {
     return (
-        <a href={'#'+navData} className={s.navLink} >
+        <a onClick={onClick} className={s.navLink} >
             <li className={s.navItem }>
                 {isSvgIcon
                 ? icon

@@ -1,0 +1,15 @@
+@import './../../assets/abstracts/mixins';
+@import './../../assets/abstracts/vars';
+
+
+.contactsList {
+  list-style: none;
+
+  position: relative;
+
+  @media screen and (max-width: 1000px) {
+    max-width: 270px;
+
+    margin-left: 10px;
+  }
+}

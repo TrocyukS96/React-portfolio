@@ -1,7 +1,5 @@
 import axios from 'axios';
 import emailjs from '@emailjs/browser';
-import {RequestData} from "../../../types";
-
 
 
 export const instance = axios.create({
@@ -10,39 +8,10 @@ export const instance = axios.create({
     // baseURL: 'http://localhost:7542/2.0/',
 })
 
-// const client = new SMTPClient({
-//     user: 'Stanislav',
-//     password: 'Gr$q7+kFGPc+-Gj',
-//     host: 'smtp.trotzuk.stanislav@gmail.com',
-//     ssl: true,
-// });
-
-// emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-//     .then((result) => {
-//         console.log(result.text);
-//     }, (error) => {
-//         console.log(error.text);
-//     });
-// };
-
-
 export const contactsApi = {
-   async sendFeedBack(contactsData:RequestData){
-        // try {
-        //     const message = await client.sendAsync({
-        //         text:contactsData.message,
-        //         from: 'you <username@trotzuk.stanislav@gmail.com>',
-        //         to: 'someone <someone@trotzuk.stanislav@gmail.com>, another <another@trotzuk.stanislav@gmail.com>',
-        //         cc: 'else <else@trotzuk.stanislav@gmail.com>',
-        //         subject: contactsData.subject,
-        //     });
-        //     console.log(message);
-        // } catch (err) {
-        //     console.error(err);
-        // }
-
+   async sendFeedBack(form:any){
        try {
-        const result = await emailjs.sendForm('service_po6nw7s', 'template_bpws7fa', 'asd', 'YOUR_PUBLIC_KEY')
+        await emailjs.sendForm('service_bbr8g5h', 'template_bpws7fa', form, 'Ft1-FiAPrhMBBSCVz')
        }catch (e) {
            console.log(e)
        }
