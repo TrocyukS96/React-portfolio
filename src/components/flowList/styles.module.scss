@@ -1,0 +1,34 @@
+@import './../../assets/abstracts/vars';
+
+.flowList {
+  & ul {
+    list-style: none;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    .flowItem {
+      padding-left: 20px;
+
+      color: white;
+      font-size: 18px;
+      position: relative;
+
+      &::before {
+        content: '';
+
+        width: 20px;
+        height: 20px;
+
+        border-radius: 50%;
+        background: #F5C463;
+        position: absolute;
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+    }
+  }
+}
