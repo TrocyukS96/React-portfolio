@@ -10,13 +10,13 @@
   @include flex-edit(center, center, column);
 
   border: 2px solid white;
-
+border-radius: 25px;
   position: relative;
 
   //background-color: $darkThemeColor;
 
-  background-image: url('./../../../assets/images/skills/codingBG.jpg');
-
+  //background-image: url('./../../../assets/images/skills/codingBG.jpg');
+  background: #d2b7a4cf;
   text-align: center;
   @media screen and (max-width: 1520px) {
     width: 550px;
@@ -60,7 +60,7 @@
     margin: 0 0 25px 0;
 
     @include text-edit(SF UI Display, 500, 3.25rem, 70px);
-    color: $textColor;
+    color: #fff;
   }
 
   .iconImg {

@@ -18,7 +18,7 @@ const skillsData = [
     {title:'Typescript',icon: reactIcon, percentage:80},
     {title:'React',icon: reactIcon, percentage:85},
     {title:'Next',icon: reactIcon, percentage:85},
-    {title:'Nest',icon: reactIcon, percentage:60},
+    {title:'Nest',icon: reactIcon, percentage:70},
     {title:'Redux',icon: reduxIcon, percentage:82},
     {title:'MobX',icon: reduxIcon, percentage:70},
     {title:'StoryBook',icon: storybookIcon, percentage:87},
